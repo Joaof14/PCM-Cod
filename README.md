@@ -49,14 +49,6 @@ jupyter notebook
 - Visualização de formas de onda
 - Estatísticas de desempenho
 
-## Personalização
-Ajuste estes parâmetros na segunda célula:
-```python
-ARQUIVO_AUDIO = "seu_audio.wav"  # Arquivo de entrada
-BITS_POR_AMOSTRA = 8             # Resolução de quantização
-SNR_dB = np.arange(SNR_MIN , SNR_MAX + PASSO_SNR , PASSO_SNR) #dB              
-```
-
 ## Saídas Esperadas
 1. **Gráfico BER vs SNR**: Comparação do desempenho das três codificações
 2. **Visualizações de Sinais**:
@@ -74,7 +66,16 @@ SNR_dB = np.arange(SNR_MIN , SNR_MAX + PASSO_SNR , PASSO_SNR) #dB
 2. Para melhor qualidade de áudio, aumente `BITS_POR_AMOSTRA`
 3. Ajuste a faixa de SNR para observar diferentes cenários de ruído
 
-## Resultados Típicos
+
+## Personalização
+Ajuste estes parâmetros na segunda célula:
+```python
+ARQUIVO_AUDIO = "seu_audio.wav"  # Arquivo de entrada
+BITS_POR_AMOSTRA = 8             # Resolução de quantização
+SNR_dB = np.arange(SNR_MIN , SNR_MAX + PASSO_SNR , PASSO_SNR) #dB              
+```
+
+## Resultados Esperados
 - **Melhor desempenho**: Codificação Polar
 - **Pior desempenho**: Codificação On-Off
 - **Manchester**: Intermediário, com vantagem de sincronismo
